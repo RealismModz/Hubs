@@ -42,18 +42,7 @@ local function MakeDraggable(topbarobject, object)
 			)
 		object.Position = pos
 	end
-	local SomethingSomething = false
-	UserInputService.InputBegan:Connect(function(key)
-		if key == Enum.KeyCode.RightControl then
-			if SomethingSomething == true then
-				SomethingSomething = false
-				MainFrame.Visible = false
-			elseif SomethingSomething == false then
-				SomethingSomething = true
-				MainFrame.Visible = true
-			end
-		end
-	end)
+	
 	topbarobject.InputBegan:Connect(
 		function(input)
 			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
@@ -96,7 +85,18 @@ local Discord = Instance.new("ScreenGui")
 Discord.Name = "Discord"
 Discord.Parent = game.CoreGui
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
+local SomethingSomething = false
+UserInputService.InputBegan:Connect(function(key)
+	if key == Enum.KeyCode.RightControl then
+		if SomethingSomething == true then
+			SomethingSomething = false
+			Discord.Enabled = false
+		elseif SomethingSomething == false then
+			SomethingSomething = true
+			Discord.Enabled = true
+		end
+	end
+end)
 function DiscordLib:Window(text)
 	local currentservertoggled = ""
 	local minimized = false

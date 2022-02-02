@@ -1204,7 +1204,7 @@ function DiscordLib:Window(text)
 		local TextBoxFrame1 = Instance.new("Frame")
 		local TextBoxFrame1Corner = Instance.new("UICorner")
 		local UsernameTextbox = Instance.new("TextBox")
-		local Seperator = Instance.new("Frame")
+		local Separator = Instance.new("Frame")
 		local HashtagLabel = Instance.new("TextLabel")
 		local TagTextbox = Instance.new("TextBox")
 		local ChangeBtn = Instance.new("TextButton")
@@ -1307,13 +1307,13 @@ function DiscordLib:Window(text)
 		UsernameTextbox.TextSize = 14.000
 		UsernameTextbox.TextXAlignment = Enum.TextXAlignment.Left
 
-		Seperator.Name = "Seperator"
-		Seperator.Parent = TextBoxFrame1
-		Seperator.AnchorPoint = Vector2.new(0.5, 0.5)
-		Seperator.BackgroundColor3 = Color3.fromRGB(64, 68, 73)
-		Seperator.BorderSizePixel = 0
-		Seperator.Position = UDim2.new(0.753000021, 0, 0.500999987, 0)
-		Seperator.Size = UDim2.new(0, 1, 0, 25)
+		Separator.Name = "Separator"
+		Separator.Parent = TextBoxFrame1
+		Separator.AnchorPoint = Vector2.new(0.5, 0.5)
+		Separator.BackgroundColor3 = Color3.fromRGB(64, 68, 73)
+		Separator.BorderSizePixel = 0
+		Separator.Position = UDim2.new(0.753000021, 0, 0.500999987, 0)
+		Separator.Size = UDim2.new(0, 1, 0, 25)
 
 		HashtagLabel.Name = "HashtagLabel"
 		HashtagLabel.Parent = TextBoxFrame1
@@ -2485,23 +2485,23 @@ function DiscordLib:Window(text)
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 				return SliderFunc
 			end
-			function ChannelContent:Seperator()
-				local Seperator1 = Instance.new("Frame")
-				local Seperator2 = Instance.new("Frame")
+			function ChannelContent:Separator()
+				local Separator1 = Instance.new("Frame")
+				local Separator2 = Instance.new("Frame")
 
-				Seperator1.Name = "Seperator1"
-				Seperator1.Parent = ChannelHolder
-				Seperator1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				Seperator1.BackgroundTransparency = 1.000
-				Seperator1.Position = UDim2.new(0, 0, 0.350318581, 0)
-				Seperator1.Size = UDim2.new(0, 100, 0, 8)
+				Separator1.Name = "Separator1"
+				Separator1.Parent = ChannelHolder
+				Separator1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				Separator1.BackgroundTransparency = 1.000
+				Separator1.Position = UDim2.new(0, 0, 0.350318581, 0)
+				Separator1.Size = UDim2.new(0, 100, 0, 8)
 
-				Seperator2.Name = "Seperator2"
-				Seperator2.Parent = Seperator1
-				Seperator2.BackgroundColor3 = Color3.fromRGB(66, 69, 74)
-				Seperator2.BorderSizePixel = 0
-				Seperator2.Position = UDim2.new(0, 0, 0, 4)
-				Seperator2.Size = UDim2.new(0, 401, 0, 1)
+				Separator2.Name = "Separator2"
+				Separator2.Parent = Separator1
+				Separator2.BackgroundColor3 = Color3.fromRGB(66, 69, 74)
+				Separator2.BorderSizePixel = 0
+				Separator2.Position = UDim2.new(0, 0, 0, 4)
+				Separator2.Size = UDim2.new(0, 401, 0, 1)
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 			end
 			function ChannelContent:Dropdown(text, list, callback)
